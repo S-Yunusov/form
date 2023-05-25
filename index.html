@@ -1,24 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>Form</title>
+  
   <!-- STYLE -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-
-
+  
+  
 </head>
 <body>
   
+  <main class="main-content">
+    <div class="container">
+      <form action="https://echo.htmlacademy.ru" method="POST">
 
+        <div>
+          <label for="fullname-input">Ism-familiyasi</label>
+          <input type="text" name="fullname" id="fullname-input" placeholder="Ism-familiya" required>
+        </div>
+        <div>
+          <label for="dob-input">Tug'ilgan sana</label>
+          <input type="date" name="dob" id="dob-input" placeholder="Tug'ilgan sana" required>
+        </div>
 
+        <div>
+          <label for="course-type-select">Kurs turi</label>
+          <select name="course-type" id="course-type-select">
+            <optgroup label="Oflayn darslar">
+              <option value="morning">Ertalabki</option>
+              <option value="afternoon">Peshingi</option>
+              <option value="evening" disabled>Kechki paytgi</option>
+            </optgroup>
+            <optgroup label="online darslar">
+              <option value="standart">Standart</option>
+              <option value="pro">Pro</option>
+            </optgroup>
+          </select>
+        </div>
 
-
-
+        <div>
+          <fieldset>
+            <legend>Qo'shimcha xizmatlar</legend>
+            <label>
+              <input type="checkbox" name="laptop">Noutbook
+            </label>
+            <label>
+              <input type="checkbox" name="monitor">Monitor
+            </label>
+            <label>
+              <input type="checkbox" name="internet" checked>Internet
+            </label>
+          </fieldset>
+        </div>
+        <button type="submit">Ro'yxatdan o'tish</button>
+      </form>
+    </div>
+  </main>
+  
+  
+  
+  
+  
+  
   <script src="js/main.js"></script>
 </body>
 </html>
